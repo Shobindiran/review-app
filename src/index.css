@@ -1,13 +1,111 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Roboto:wght@400;500;700;900&display=swap');
+
+
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(194, 246, 255);
+}
+
+/* header starts */
+header{
+  max-width: 1600px;
+  margin-inline:auto;
+  padding: 20px 10px;
+}
+
+header>h3{
+  font-size: 40px;
+}
+/* header ends */
+
+/* container */
+.container{
+  margin: 0px auto;
+  max-width: 800px;
+  padding: 20px;
+}
+
+/* feedback status */
+.feedback-status{
+  display: flex;
+  justify-content: space-between;
+}
+
+/* card */
+.card{
+  position: relative;
+  background-color: white;
+  padding: 50px 20px;
+  border-radius: 10px;
+  margin-block: 50px;
+}
+
+.rating,
+.rating-list label{
+  width:50px;
+  height: 50px;
+  border-radius: 50%;
+  border: solid rgb(67, 85, 250) 1px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating.rating-display{
+  position: absolute;
+  background-color: aqua;
+  top:-10px;
+  left:-10px;
+}
+
+.feedback{
+  font-size: 20px;
+}
+
+.close-icon{
+  position: absolute;
+  top:15px;
+  right: 15px;
+}
+
+/* rating list */
+
+.rating-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+}
+
+.rating-list>li{
+  display: flex;
+}
+
+.rating-list>li>input{
+  opacity: 0;
+}
+
+.rating-list>li>label{
+  position: relative;
+  right: 15px; 
+  cursor: pointer;
+  background-color: rgb(182, 253, 253);
+}
+
+.rating-list>li>label:hover{
+  background-color: aqua;
+}
+
+
+.rating-list>li>input:checked ~ label{
+  background-color: aqua;
 }
