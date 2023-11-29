@@ -10,39 +10,42 @@ import FeedbackForm from "./components/FeedbackForm";
 
 function App() {
 
-  let [feedback,setFeedback] = useState([
-    {
-      id: 1,
-      rating: 9,
-      feedback: "3rd feedback"
-    },
-    {
-      id: 2,
-      rating: 5,
-      feedback: "2nd feedback"
-    },
-    {
-      id: 3,
-      rating: 1,
-      feedback: "3rd feedback"
-    },
-    {
-      id: 4,
-      rating: 3,
-      feedback: "4th feedback"
-    }
-])
+  // const {feedback} = useContext(FeedbackContext)
+  
 
-const handleDelete = (id)=>{
-  if(window.confirm("are u sure to delete")){
-    setFeedback(feedback.filter((item)=>(item.id!==id)));
-  }
-}
+//   let [feedback,setFeedback] = useState([
+//     {
+//       id: 1,
+//       rating: 9,
+//       feedback: "3rd feedback"
+//     },
+//     {
+//       id: 2,
+//       rating: 5,
+//       feedback: "2nd feedback"
+//     },
+//     {
+//       id: 3,
+//       rating: 1,
+//       feedback: "3rd feedback"
+//     },
+//     {
+//       id: 4,
+//       rating: 3,
+//       feedback: "4th feedback"
+//     }
+// ])
 
-const addNewFeedback = (newFeedback)=>{
-  newFeedback.id=uuidv4();
-  setFeedback([...feedback,newFeedback]);
-}
+// const handleDelete = (id)=>{
+//   if(window.confirm("are u sure to delete")){
+//     setFeedback(feedback.filter((item)=>(item.id!==id)));
+//   }
+// }
+
+// const addNewFeedback = (newFeedback)=>{
+//   newFeedback.id=uuidv4();
+//   setFeedback([...feedback,newFeedback]);
+// }
 
   return (
     <FeedbackProvider>
@@ -50,9 +53,9 @@ const addNewFeedback = (newFeedback)=>{
         <Header text ={'Review App'}/>
 
         <div className="container">
-          <FeedbackForm addNewFeedback={addNewFeedback}/>
-          <FeedbackStatus feedbackArr={feedback}/>
-          <FeedbackList feedbackArr={feedback} handleDelete={handleDelete}/> 
+          <FeedbackForm /> {/*addNewFeedback={addNewFeedback} */}
+          <FeedbackStatus /> {/*feedbackArr={feedback} */}
+          <FeedbackList /> {/*feedbackArr={feedback} handleDelete={handleDelete} */}
         </div>    
     </FeedbackProvider>
   );

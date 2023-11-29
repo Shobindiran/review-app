@@ -46,6 +46,26 @@ header>h3{
   margin-block: 50px;
 }
 
+.btn{
+  width: 100px;
+  height: 35px;
+  font-size: 20px;
+  background-color: #00ccff;
+  border: none;
+  border-radius: 7px;
+}
+
+.btn:disabled{
+  background-color: #00ccffc0;
+}
+
+
+.no-feedback-alert{   /*  in feedbacklist component  */
+  text-align: center;
+  margin-top: 50px;
+  color:red
+}
+
 .rating,
 .rating-list label{
   width:50px;
@@ -109,3 +129,41 @@ header>h3{
 .rating-list>li>input:checked ~ label{
   background-color: aqua;
 }
+
+.feedback-card>h1{
+  text-align: center;
+}
+
+.feedback-card>h3{
+  margin-block:20px;
+  text-align: center;
+}
+
+.feedback-card>h5{
+  text-align: center;
+}
+
+.feedback-card .input-div ul{
+  margin-bottom: 20px;
+}
+
+.feedback-card .input-div>div{
+  position: relative;
+  display: flex;
+}
+
+.feedback-card .input-div>div>input{
+  width:100%;
+  height: 50px;
+  border-radius: 15px;
+  font-size: 20px;
+  padding-inline:20px 120px;
+}
+
+.feedback-card .input-div>div>button{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  right: 10px;
+}
+

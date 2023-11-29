@@ -2,7 +2,7 @@ import React from 'react'
 
 const Button = ({type,isDisabled,children}) => {
   return (
-    <button type = {type} disabled={isDisabled}>
+    <button type = {type} disabled={isDisabled} className='btn'>
         {children}
     </button>
   )
